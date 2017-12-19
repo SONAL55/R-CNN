@@ -46,15 +46,6 @@ Usage
 $ KERAS_BACKEND=theano python trackgesture.py 
 We are setting KERAS_BACKEND to change backend to Theano, so in case you have already done it via Keras.json then no need to do that. But if you have Tensorflow set as default then this will be required.
 
-Features
-This application comes with CNN model to recognize upto 5 pretrained gestures:
-
-OK
-PEACE
-STOP
-PUNCH
-NOTHING (ie when none of the above gestures are input)
-This application provides following functionalities:
 
 I am using OpenCV for capturing the user's hand gestures. In order to simply things I am doing post processing on the captured images to highlight the contours & edges. Like applying binary threshold, blurring, gray scaling.
 
@@ -177,5 +168,7 @@ get_activations = K.function([model.layers[0].input, K.learning_phase()], [layer
 activations = get_activations([input_image, 0])[0]
 output_image = activations
 Layer 4 visualization for PUNCH gesture 
+
 CONCLUSION
+
 So where to go from here? Well I thought of testing out the responsiveness of NN predictions and games are good benchmark. On MAC I dont have any games installed but then this Chrome Browser Dino Jump game came handy. So I bound the 'Punch' gesture with jump action of the Dino character. Basically can work with any other gesture but felt Punch gesture is easy. Stop gesture was another candidate.
