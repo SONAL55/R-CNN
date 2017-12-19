@@ -18,7 +18,7 @@ Repo contents
 trackgesture.py : The main script launcher. This file contains all the code for UI options and OpenCV code to capture camera contents. This script internally calls interfaces to gestureCNN.py.
 gestureCNN.py : This script file holds all the CNN specific code to create CNN model, load the weight file (if model is pretrained), train the model using image samples present in ./imgfolder_b, visualize the feature maps at different layers of NN (of pretrained model) for a given input image present in ./imgs folder.
 imgfolder_b : This folder contains all the 4015 gesture images I took in order to train the model.
-ori_4015imgs_weights.hdf5 : This is pretrained file. If for some reason you find issues with downloading from github then it can be downloaded from my google driver link - https://drive.google.com/open?id=0B6cMRAuImU69SHNCcXpkT3RpYkE
+ori_4015imgs_weights.hdf5 :
 imgs - This is an optional folder of few sample images that one can use to visualize the feature maps at different layers. These are few sample images from imgfolder_b only.
 ori_4015imgs_acc.png : This is just a pic of a plot depicting model accuracy Vs validation data accuracy after I trained it.
 ori_4015imgs_loss.png : This is just a pic of a plot depicting model loss Vs validation loss after I training.
@@ -36,7 +36,7 @@ PUNCH
 NOTHING (ie when none of the above gestures are input)
 This application provides following functionalities:
 
-Prediction : Which allows the app to guess the user's gesture against pretrained gestures. App can dump the prediction data to the console terminal or to a json file directly which can be used to plot real time prediction bar chart (you can use my other script - https://github.com/asingh33/LivePlot)
+Prediction : Which allows the app to guess the user's gesture against pretrained gestures. App can dump the prediction data to the console terminal or to a json file directly which can be used to plot real time prediction bar chart.
 New Training : Which allows the user to retrain the NN model. User can change the model architecture or add/remove new gestures. This app has inbuilt options to allow the user to create new image samples of user defined gestures if required.
 Visualization : Which allows the user to see feature maps of different NN layers for a given input gesture image. Interesting to see how NN works and learns things.
 imgs - This is an optional folder of few sample images that one can use to visualize the feature maps at different layers. These are few sample images from imgfolder_b only.
@@ -55,10 +55,6 @@ STOP
 PUNCH
 NOTHING (ie when none of the above gestures are input)
 This application provides following functionalities:
-
-Prediction : Which allows the app to guess the user's gesture against pretrained gestures. App can dump the prediction data to the console terminal or to a json file directly which can be used to plot real time prediction bar chart (you can use my other script - https://github.com/asingh33/LivePlot)
-New Training : Which allows the user to retrain the NN model. User can change the model architecture or add/remove new gestures. This app has inbuilt options to allow the user to create new image samples of user defined gestures if required.
-Visualization : Which allows the user to see feature maps of different NN layers for a given input gesture image. Interesting to see how NN works and learns things.
 
 I am using OpenCV for capturing the user's hand gestures. In order to simply things I am doing post processing on the captured images to highlight the contours & edges. Like applying binary threshold, blurring, gray scaling.
 
